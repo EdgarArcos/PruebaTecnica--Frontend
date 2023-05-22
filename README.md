@@ -1,2 +1,0 @@
-# PruebaTecnica--Frontend
-Hola 
