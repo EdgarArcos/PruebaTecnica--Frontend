@@ -9,8 +9,7 @@ export function FormEdit({ isvisible, onClose, title }) {
     const navigate = useNavigate()
     const params = useParams()
     const [post, setPost] = useState({
-        title: "",
-        description: ""
+        title: ""
     })
     function handleClose(e) {
         if (e.target.id === "wrapper") onClose()
@@ -37,7 +36,6 @@ export function FormEdit({ isvisible, onClose, title }) {
                             initialValues={post}
                             validationSchema={Yup.object({
                                 title: Yup.string().required("Title is Required"),
-                                description: Yup.string().required("Description is Required"),
                             })}
                             onSubmit={(values, action) => {
                                 updatePost(post._id, values)
@@ -50,9 +48,6 @@ export function FormEdit({ isvisible, onClose, title }) {
                                     <h3>Title</h3>
                                     <Field name='title' placeholder='title' className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full" />
                                     <ErrorMessage component="p" className="text-red-400 text-sm" name="title" />
-                                    <h3>Description</h3>
-                                    <Field className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full" name='description' placeholder='description' />
-                                    <ErrorMessage className="text-red-400 text-sm" component="p" name="description" />
                                     <button type="submit" className=" bg-indigo-600 px-4 py-2 rounded mt-2 text-white focus:outline-none disabled:bg-indigo-400 hover:bg-indigo-500">Save</button>
                                 </Form>)}
                         </Formik>

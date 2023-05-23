@@ -12,12 +12,8 @@ export function PostProvider({ children }) {
   const [posts, setPosts] = useState([])
 
   const getPosts = async (user) => {
-    const resultado = await getPostsRequests()
-    let posts = []
-    if (user?.email) {
-      resultado.data.map((post) => { if (post.user === user.email) posts.push(post) })
-    }
-    return posts
+    const res = await getPostsRequests()
+    setPosts(res.data)
   }
 
   const createPost = async (post) => {
@@ -43,7 +39,7 @@ export function PostProvider({ children }) {
 
 
   return (
-    <postContext.Provider value={{ setPosts, getPosts, createPost, deletePost, getPost, updatePost }}>
+    <postContext.Provider value={{ posts, setPosts, getPosts, createPost, deletePost, getPost, updatePost }}>
       {children}
     </postContext.Provider>
   )
