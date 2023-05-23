@@ -1,5 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { usePosts } from "../Context/PostContext";
+import { usePosts } from "../../Context/PostContext";
 import * as Yup from "yup";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -48,7 +48,7 @@ export function FormEdit({ isvisible, onClose, title }) {
                                     <h3>Title</h3>
                                     <Field name='title' placeholder='title' className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full" />
                                     <ErrorMessage component="p" className="text-red-400 text-sm" name="title" />
-                                    <button type="submit" className=" bg-indigo-600 px-4 py-2 rounded mt-2 text-white focus:outline-none disabled:bg-indigo-400 hover:bg-indigo-500">Save</button>
+                                    <button type="submit" className=" bg-purple-700 hover:bg-purple-600 text-white font-bold my-2 py-2 px-4 border-b-4 border-purple-900 hover:border-purple-500 rounded">Save</button>
                                 </Form>)}
                         </Formik>
                     </div>

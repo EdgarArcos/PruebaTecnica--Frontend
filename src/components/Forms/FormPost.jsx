@@ -1,5 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { usePosts } from "../Context/PostContext";
+import { usePosts } from "../../Context/PostContext";
 import { useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import * as Yup from "yup";
@@ -42,7 +42,7 @@ export function FormPost({ isvisible, onClose }) {
                   <ErrorMessage component="p" className="text-red-400 text-sm" name="title" />
                   <h3>Image</h3>
                   <input type="file" name="image" className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full" onChange={(e) => setFieldValue('image', e.target.files[0])} />
-                  <button className=" bg-indigo-600 px-4 py-2 rounded mt-2 text-white focus:outline-none disabled:bg-indigo-400 hover:bg-indigo-500" type="submit" disabled={isSubmitting}>{isSubmitting ? (
+                  <button className=" bg-purple-700 hover:bg-purple-600 text-white font-bold my-2 py-2 px-4 border-b-4 border-purple-900 hover:border-purple-500 rounded" type="submit" disabled={isSubmitting}>{isSubmitting ? (
                     <AiOutlineLoading3Quarters className=" animate-spin h-5 w-5" />
                   ) : 'Save'}</button>
                 </Form>)}

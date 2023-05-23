@@ -15,7 +15,7 @@ export function HomePage() {
   return (
     <>
       <Navbar />
-      <img className="w-10/12 ml-36 mt-4" src="src\assets\Banner.gif" alt="banner" />
+      <img className="w-10/12 ml-36  my-4" src="src\assets\Banner.gif" alt="banner" />
       <div className="text-white ">
         <div className=" mx-5 grid grid-cols-4 gap-2">
           {posts?.length !== 0 && posts?.map(post => (

@@ -26,8 +26,8 @@ export function YourCreations() {
         <>
             <Navbar />
             <div className="text-white ml-24 mr-24 mb-24">
-                <button className="ml-5 bg-indigo-600 text-sm px-2 py-1 rounded-sm hover:bg-indigo-500 my-5" onClick={() => modalVerify()}>New Post +</button>
-                <div className=" grid grid-cols-4 gap-2">
+                <button className="bg-purple-700 hover:bg-purple-600 text-white font-bold py-2 px-4 border-b-4 border-purple-900 hover:border-purple-500 rounded" onClick={() => modalVerify()}>New Post +</button>
+                <div className=" pt-3 grid grid-cols-4 gap-2">
                     {filteredPosts?.length !== 0 && filteredPosts?.map(post => (
                         <FilteredPostCard post={post} key={post._id} />
                     )

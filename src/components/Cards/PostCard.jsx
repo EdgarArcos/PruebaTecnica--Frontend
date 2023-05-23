@@ -10,7 +10,7 @@ export default function PostCard({ post }) {
                         <p className="m-1 break-all">{post.description}</p>
                     </div>
                     <div className="mt-6">
-                        {post.image && <img className="rounded-xl h-auto max-w-full" src={post.image.url} />}
+                        <img className="rounded-xl h-60max-w-full" src={post.image.url} />
                     </div>
                 </div>
             </div>
