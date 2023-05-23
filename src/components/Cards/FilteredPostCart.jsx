@@ -1,14 +1,14 @@
 import toast from "react-hot-toast";
-import { usePosts } from "../Context/PostContext";
+import { usePosts } from "../../Context/PostContext";
 import { useState } from "react";
-import { FormEdit } from "./FormEdit";
+import { FormEdit } from "../FormEdit";
 import { useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import { ModalLogin } from "./ModalLogin";
+import { ModalLogin } from "../ModalLogin";
 import { FaPencilAlt } from "react-icons/fa"
 import { BsTrash3Fill } from "react-icons/bs";
 
-export default function PostCard({ post }) {
+export default function FilteredPostCard({ post }) {
     const navigate = useNavigate()
     const { deletePost } = usePosts()
     const [showEdit, setShowEdit] = useState(false)

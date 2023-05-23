@@ -13,7 +13,7 @@ export function FormEdit({ isvisible, onClose, title }) {
     })
     function handleClose(e) {
         if (e.target.id === "wrapper") onClose()
-        navigate('/')
+        navigate('/YourCreations')
     }
     useEffect(() => {
         (async () => {

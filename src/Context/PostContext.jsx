@@ -16,6 +16,15 @@ export function PostProvider({ children }) {
     setPosts(res.data)
   }
 
+  const getPostsFiltered = async (user) => {
+    const resultado = await getPostsRequests()
+    let posts = []
+    if (user?.email) {
+      resultado.data.map((post) => { if (post.user === user.email) posts.push(post) })
+    }
+    return posts
+  }
+
   const createPost = async (post) => {
     const res = await createPostRequest(post)
     setPosts([...posts, res.data])
@@ -39,7 +48,7 @@ export function PostProvider({ children }) {
 
 
   return (
-    <postContext.Provider value={{ posts, setPosts, getPosts, createPost, deletePost, getPost, updatePost }}>
+    <postContext.Provider value={{ posts, setPosts, getPosts, getPostsFiltered, createPost, deletePost, getPost, updatePost }}>
       {children}
     </postContext.Provider>
   )
