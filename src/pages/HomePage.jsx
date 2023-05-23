@@ -20,9 +20,10 @@ export function HomePage() {
   return (
     <>
       <Navbar />
-      <div className="text-white ml-24 mr-24 mb-24">
+      <img className="w-10/12 ml-36 mt-4" src="src\assets\Banner.gif" alt="banner" />
+      <div className="text-white ">
         <button className="ml-5 bg-indigo-600 text-sm px-2 py-1 rounded-sm hover:bg-indigo-500 my-5" onClick={() => modalVerify()}>New Post +</button>
-        <div className=" grid grid-cols-4 gap-2">
+        <div className=" ml-5 grid grid-cols-4 gap-2">
           {posts?.length !== 0 && posts?.map(post => (
             <PostCard post={post} key={post._id} />
           )
