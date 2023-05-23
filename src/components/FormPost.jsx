@@ -11,7 +11,7 @@ export function FormPost({ isvisible, onClose }) {
   const [createdPost, setCreatedPost] = useState({
     title: "",
     image: null,
-    user: user.email
+    user: user?.email
   })
   if (!isvisible) return null
   function handleClose(e) {

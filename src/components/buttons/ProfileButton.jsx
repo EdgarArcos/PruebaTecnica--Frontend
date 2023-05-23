@@ -5,7 +5,7 @@ export default function ProfileButton() {
     const { user, logout } = useAuth0()
     return (
         <div className="text-center">
-            <button onClick={() => logout()} ><img className="rounded-3xl border-neutral-900 border-4 border-dashed hover:rounded-full hover:border-red-700" src={user.picture} alt={user.name} /></button>
+            <button onClick={() => logout()} ><img className=" h-20 rounded-full border-white-900 border-4 border-dashed hover:rounded-full hover:border-red-700" src={user.picture} alt={user.name} /></button>
             <p className="text-white">{user.name}</p>
         </div>
     )
