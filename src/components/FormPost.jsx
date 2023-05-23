@@ -10,7 +10,6 @@ export function FormPost({ isvisible, onClose }) {
   const { createPost } = usePosts()
   const [createdPost, setCreatedPost] = useState({
     title: "",
-    description: "",
     image: null,
     user: user.email
   })
@@ -29,7 +28,6 @@ export function FormPost({ isvisible, onClose }) {
               initialValues={createdPost}
               validationSchema={Yup.object({
                 title: Yup.string().required("Title is Required"),
-                description: Yup.string().required("Description is Required"),
               })}
               onSubmit={async (values, actions) => {
                 await createPost(values)
@@ -42,9 +40,6 @@ export function FormPost({ isvisible, onClose }) {
                   <h3>Title</h3>
                   <Field name='title' placeholder='title' className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full" />
                   <ErrorMessage component="p" className="text-red-400 text-sm" name="title" />
-                  <h3>Description</h3>
-                  <Field className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full" name='description' placeholder='description' />
-                  <ErrorMessage className="text-red-400 text-sm" component="p" name="description" />
                   <h3>Image</h3>
                   <input type="file" name="image" className="px-3 py-2 focus:outline-none rounded bg-gray-600 text-white w-full" onChange={(e) => setFieldValue('image', e.target.files[0])} />
                   <button className=" bg-indigo-600 px-4 py-2 rounded mt-2 text-white focus:outline-none disabled:bg-indigo-400 hover:bg-indigo-500" type="submit" disabled={isSubmitting}>{isSubmitting ? (
