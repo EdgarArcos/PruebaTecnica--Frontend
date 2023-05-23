@@ -9,7 +9,7 @@ export default function Navbar() {
     if (isAuthenticated === false) {
         return (
             <>
-                <nav className=" dark:bg-gray-700 h-32">
+                <nav className=" dark:bg-gray-800 h-32">
                     <div className=" px-4 py-1">
                         <div className=" flex items-center">
                             <img src="src\assets\gifed-low-resolution-color-logo-removebg-preview.png" alt="Logo" className=' h-32' />
@@ -39,7 +39,7 @@ export default function Navbar() {
     }
     return (
         <>
-            <nav className="dark:bg-gray-700 h-32">
+            <nav className="dark:bg-gray-800 h-32">
                 <div className=" px-4 py-1">
                     <div className=" flex items-center">
                         <img src="src\assets\gifed-low-resolution-color-logo-removebg-preview.png" alt="Logo" className=' h-32' />
