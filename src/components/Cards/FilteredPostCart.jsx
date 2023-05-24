@@ -49,9 +49,6 @@ export default function FilteredPostCard({ post }) {
                     <div className="text-center">
                         <h2 className=" break-all text-xl uppercase">{post.title}</h2>
                     </div>
-                    <div className="inline ">
-                        <p className="m-1 break-all">{post.description}</p>
-                    </div>
                     <div className="mt-6">
                         <img className="rounded-xl h-auto max-w-full" src={post.image.url} />
                     </div>
