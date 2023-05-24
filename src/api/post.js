@@ -1,18 +1,18 @@
 import axios from "axios";
-
-export const getPostsRequests = async () => await axios.get('http://localhost:4000/posts')
+const API_URL = import.meta.env.VITE_APP_API_URL;
+export const getPostsRequests = async () => await axios.get(`${API_URL}/posts`)
 export const createPostRequest = async (post) => {
     const form = new FormData();
 
     for (let key in post) {
         form.append(key, post[key]);
     }
-    return await axios.post('http://localhost:4000/posts', form, {
+    return await axios.post(`${API_URL}/posts`, form, {
         headers: {
             "Content-Type": "multipart/form-data"
         }
     })
 }
-export const deletePostRequest = async _id => await axios.delete('http://localhost:4000/posts/' + _id)
-export const getPostRequest = async _id => await axios.get('http://localhost:4000/posts/' + _id)
-export const updatePostRequest = async (_id, newPost) => { await axios.put(`http://localhost:4000/posts/` + _id, newPost) }
+export const deletePostRequest = async _id => await axios.delete(`${API_URL}/posts/` + _id)
+export const getPostRequest = async _id => await axios.get(`${API_URL}/posts/` + _id)
+export const updatePostRequest = async (_id, newPost) => { await axios.put(`${API_URL}/posts/` + _id, newPost) }

@@ -18,7 +18,7 @@ export default function Navbar() {
                                 </div>
                             </div> :
                             <div>
-                                <div className='mr-10'>
+                                <div className='mr-32 '>
                                     <LoginButton />
                                 </div>
                             </div>

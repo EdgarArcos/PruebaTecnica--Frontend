@@ -11,7 +11,12 @@ function App() {
   return (
     <div className="bg-gradient-to-b from-violet-500 to-fuchsia-500">
       <div className="bg-gray-900 min-h-screen grid mx-96">
-        <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin} >
+        <Auth0Provider
+          domain={domain}
+          clientId={clientId}
+          authorizationParams={{
+            redirect_uri: window.location.origin,
+          }}>
           <PostProvider>
             <RouterProvider router={router} />
             <Toaster />
