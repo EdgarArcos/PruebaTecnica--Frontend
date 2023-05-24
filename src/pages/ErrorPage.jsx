@@ -2,6 +2,6 @@ import React from 'react'
 
 export function ErrorPage() {
   return (
-    <div>ErrorPage</div>
+    <div>404 ErrorPage</div>
   )
 }

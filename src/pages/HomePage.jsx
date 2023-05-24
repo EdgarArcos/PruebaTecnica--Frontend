@@ -7,10 +7,9 @@ export function HomePage() {
 
   const { getPosts, posts } = usePosts()
   const [showModal, setShowModal] = useState(false)
-  const { user } = useAuth0()
 
   useEffect(() => {
-    getPosts(user)
+    getPosts()
   }, [])
   return (
     <>
@@ -24,7 +23,6 @@ export function HomePage() {
           )}
         </div>
       </div>
-      <FormPost isvisible={showModal} onClose={() => setShowModal(false)} />
     </>
   )
 }

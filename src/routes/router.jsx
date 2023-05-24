@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { ErrorPage, HomePage, YourCreations } from '../pages/barrel';
+import { ErrorPage, HomePage, Search, YourCreations } from '../pages/barrel';
 
 
 export const router = createBrowserRouter([
@@ -18,5 +18,9 @@ export const router = createBrowserRouter([
     {
         path: "/YourCreations",
         element: <YourCreations />
+    },
+    {
+        path: "/Search",
+        element: <Search />
     },
 ])
