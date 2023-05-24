@@ -26,7 +26,7 @@ export function Search() {
         <>
             <Navbar />
             <div className="text-center">
-                <input className="w-5/12 h-24 text-3xl text-gray-900  border-violet-300 rounded-lg bg-gray-50 pl-16 hover:border-violet-700 border-4" placeholder='Search...' onChange={searcher}></input>
+                <input className="w-5/12 h-24 text-3xl text-gray-900  border-violet-300 rounded-lg bg-gray-50 pl-16 hover:border-violet-700 border-4 my-4" placeholder='Search...' onChange={searcher}></input>
             </div>
             <div className="text-white ">
                 <div className=" mx-5 grid grid-cols-4 gap-2">
