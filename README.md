@@ -13,17 +13,17 @@ Poder seguir otros usuarios crear algun tipo de filtro para los distintos posts 
 
 ## Tecnologias y librerias usadas
 
-* Cloudinary
-* Cors
-* Dotenv
-* Express
-* Express-fileupload
-* fs-extra
-* helmet
-* http-errors
-* mongoose
-* morgan
-* nodemon
+* axios
+* formik
+* React.js
+* React-copy-to-clipboard
+* React-dom
+* React-hot-toast
+* react-icons
+* react-router-dom
+* yup
+* tailwind
+* vite
 
 ## Instalar y ejecutar proyecto
 
@@ -36,6 +36,7 @@ Poder seguir otros usuarios crear algun tipo de filtro para los distintos posts 
 5. Abrir desde Visual Studio Code el repositorio previamente descargado
 6. Abrir la consola y ejecutar el comando npm i (se instalara todas las librerias anteriormente dichas)
 7.Crear una base de datos y rellenar tu punto env con las credenciales necesarias
+7. Descargarte el otro repositorio backend con el mismo nombre que este 
 7. Ejecutar npm run dev para que arranque el aplicacion
 8. Hacer las pruebas que requiera con Postman o ThunderClient
 
