@@ -2,7 +2,7 @@ import { usePosts } from "../Context/PostContext";
 import FilteredPostCard from "../components/Cards/FilteredPostCart";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from "react";
-import { ModalLogin } from "../components/ModalLogin";
+import { ModalLogin } from "../components/Login/ModalLogin";
 import Navbar from "../components/Navbar/Navbar";
 import { FormPost } from "../components";
 

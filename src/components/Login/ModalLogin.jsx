@@ -1,6 +1,6 @@
 import React from 'react'
 import toast from "react-hot-toast";
-import LoginButtton from "./buttons/LoginButton";
+import LoginButtton from "../buttons/LoginButton";
 
 export const ModalLogin = () => {
     toast((t) => (

@@ -1,12 +1,10 @@
 import { usePosts } from "../Context/PostContext.jsx";
-import { PostCard, FormPost } from "../components";
-import { useAuth0 } from "@auth0/auth0-react";
-import { useEffect, useState } from "react";
+import { PostCard } from "../components";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar.jsx";
 export function HomePage() {
 
   const { getPosts, posts } = usePosts()
-  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     getPosts()

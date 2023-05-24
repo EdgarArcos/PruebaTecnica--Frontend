@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FormEdit } from "../Forms/FormEdit";
 import { useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import { ModalLogin } from "../ModalLogin";
+import { ModalLogin } from "../Login/ModalLogin";
 import { FaPencilAlt } from "react-icons/fa"
 import { BsTrash3Fill } from "react-icons/bs";
 
@@ -27,7 +27,7 @@ export default function FilteredPostCard({ post }) {
         isAuthenticated ? handleDelete(_id) : ModalLogin()
     }
 
-    const handleDelete = (_id, title) => {
+    const handleDelete = (_id) => {
         toast((t) => (
             <div className="text-center">
                 <p>¿Do you want to delete? <strong className="break-all">{post.title}</strong></p>

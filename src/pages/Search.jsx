@@ -1,16 +1,13 @@
 import { usePosts } from "../Context/PostContext.jsx";
-import { PostCard, FormPost } from "../components";
-import { useAuth0 } from "@auth0/auth0-react";
+import { PostCard } from "../components";
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar/Navbar.jsx";
-import { BsSearch } from "react-icons/bs";
 export function Search() {
 
     const { getPosts, posts } = usePosts()
     const [search, setSearch] = useState("")
     const searcher = (e) => {
         setSearch(e.target.value)
-        console.log(search);
     }
 
     let results = []
