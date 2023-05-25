@@ -37,7 +37,7 @@ export function FormEdit({ isvisible, onClose, title }) {
                             validationSchema={Yup.object({
                                 title: Yup.string().required("Title is Required"),
                             })}
-                            onSubmit={(values, action) => {
+                            onSubmit={(values) => {
                                 updatePost(post._id, values)
                                 onClose()
                             }}
