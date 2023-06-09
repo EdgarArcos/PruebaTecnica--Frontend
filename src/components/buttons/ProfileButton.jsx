@@ -5,7 +5,6 @@ export default function ProfileButton() {
     return (
         <div className="text-center">
             <button onClick={() => logout()} ><img className=" h-20 rounded-full border-purple-700 border-4 hover:rounded-full hover:border-red-700" src={user.picture} alt={user.name} /></button>
-            <p className="text-white">{user.name}</p>
         </div>
     )
 }

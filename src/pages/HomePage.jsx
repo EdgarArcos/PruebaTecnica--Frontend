@@ -12,7 +12,9 @@ export function HomePage() {
   return (
     <>
       <Navbar />
-      <img className="w-10/12 ml-36 h-52  my-4" src="src\assets\Bannermorado.jpg" alt="banner" />
+      <div className=" flex justify-center ">
+        <img className="w-10/12 object-center h-52  my-4" src="src\assets\Bannermorado.jpg" alt="banner" />
+      </div>
       <div className="text-white ">
         <div className=" mx-5 grid grid-cols-4 gap-2">
           {posts?.length !== 0 && posts?.map(post => (

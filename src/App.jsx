@@ -10,7 +10,7 @@ const clientId = import.meta.env.VITE_APP_AUTH0_CLIENT_ID
 function App() {
   return (
     <div className="bg-gradient-to-b from-violet-500 to-fuchsia-500">
-      <div className="bg-gray-900 min-h-screen grid mx-96">
+      <div className="bg-gray-900 min-h-screen grid mx-52">
         <Auth0Provider
           domain={domain}
           clientId={clientId}

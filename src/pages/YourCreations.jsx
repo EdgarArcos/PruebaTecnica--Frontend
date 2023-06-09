@@ -25,7 +25,7 @@ export function YourCreations() {
     return (
         <>
             <Navbar />
-            <div className="text-white ml-24 mr-24 mb-24">
+            <div className="text-white mx-5 mb-24">
                 <button className="bg-purple-700 hover:bg-purple-600 text-white font-bold mt-3 py-2 px-4 border-b-4 border-purple-900 hover:border-purple-500 rounded" onClick={() => modalVerify()}>New Post +</button>
                 <div className=" pt-3 grid grid-cols-4 gap-2">
                     {filteredPosts?.length !== 0 && filteredPosts?.map(post => (

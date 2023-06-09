@@ -42,8 +42,8 @@ export default function FilteredPostCard({ post }) {
         <div className="text-white">
             <div className=" rounded-2xl bg-zinc-800 hover:bg-zinc-700 hover:cursor-pointer ">
                 <div className=" px-12 py-5">
-                    <div className=" my-1 text-end">
-                        <button className="ml-5 text-sm px-4 py-2 rounded-sm hover:text-purple-400" onClick={() => verifyHandleEdit()}><FaPencilAlt /></button>
+                    <div className="flex justify-end">
+                        <button className="text-sm  py-1 rounded-sm hover:text-purple-400" onClick={() => verifyHandleEdit()}><FaPencilAlt /></button>
                         <button onClick={() => verifyHandleDelete(post._id, post.title)} className="text-sm px-4 py-2 ml-5 rounded-sm hover:text-purple-400"><BsTrash3Fill /></button>
                     </div>
                     <div className="text-center">
